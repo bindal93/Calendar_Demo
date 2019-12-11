@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="ISO-8859-1">
+<title>Calendar Demo</title>
+<script src="app/lib/Angular/angular.js"></script>
+<script src="app/js/controllers.js"></script>
+<script src="app/js/app.js"></script>
+<link rel="stylesheet" type="text/css" href="app/styles/style.css" />
+
+</head>
+
+
+<body>
+	<div id="div1" ng-controller="userCtrl">
+		<table style="width: 100%">
+			<thead>
+				<tr>
+					<th ng-repeat="day in days" class="cellDay">{{day}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="dat in date">
+					<td ng-repeat="da in dat" id="{{'dayValue-'+da}}" class="cellDate"
+						ng-click="dateSelected($event)">{{da}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>
